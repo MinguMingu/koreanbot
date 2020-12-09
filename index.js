@@ -156,7 +156,7 @@ client.on("message", (message) => {
     if (message.member != null) {
       // 채널에서 공지 쓸 때
       let contents = message.content.slice("!전체공지2".length)
-      let embed = new Discord.MessageEmbed().setAuthor("공지 of 민구 BOT").setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
+      let embed = new Discord.MessageEmbed().setAuthor("공지 of 민구 BOT").setColor("#186de6").setFooter(`민구 BOT`).setTimestamp()
 
       embed.addField("공지: ", contents)
 
