@@ -84,30 +84,6 @@ client.on("message", (message) => {
     message.channel.send(embed)
   }
 
-  if (msg.content === '!play') {
-    // Only try to join the sender's voice channel if they are in one themselves
-    if (msg.member.voiceChannel) {
-      msg.member.voiceChannel.join()
-        .then(connection => { // Connection is an instance of VoiceConnection
-          msg.reply('playing music!');
-          const dispatcher = connection.playFile('D:\a_hisa - Single Collection\Secret Forest.mp3');
-          dispatcher.on("end", end => {});
-        })
-        .catch(console.log);
-    } else {
-      msg.reply('먼저 방에 들어가');
-    }
-  }
-  if (msg.content === 'r.leave') {
-    // Only try to join the sender's voice channel if they are in one themselves
-    if (msg.member.voiceChannel) {
-      msg.member.voiceChannel.leave();
-      msg.reply('bye!');
-    } else {
-      msg.reply('이미 나왔는데..');
-    }
-  }
-
   if (message.content == "embed") {
     let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
     let embed = new Discord.MessageEmbed()
