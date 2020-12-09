@@ -132,10 +132,11 @@ client.on("message", (message) => {
       .setFooter("민구가 만듬", img)
 
     message.channel.send(embed)
-  } else if (message.content == "!명렁어") {
+  } else if (message.content == "!명령어") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
       { name: "!명령어", desc: "help" },
+      { name: "!규칙", desc: "현 디스코드 방 규칙" },
       { name: "ping", desc: "현재 핑 상태" },
       { name: "embed", desc: "embed 예제1" },
       { name: "!전체공지", desc: "dm으로 전체 공지 보내기" },
@@ -147,7 +148,6 @@ client.on("message", (message) => {
       { name: "!갈빙", desc: "갈빙 에 대한 자세한 설명" },
       { name: "!인사", desc: "인사" },
       { name: "!카트라이더클럽", desc: "카트라이더 클럽(Experts)디스코드서버" },
-      { name: "!규칙", desc: "현 디스코드 방 규칙" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of 민구 BOT", helpImg).setColor("#186de6").setFooter(`민구 BOT`).setTimestamp()
