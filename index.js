@@ -54,6 +54,34 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
+client.on("message", (message) => {
+  if (message.author.bot) return
+  
+  if (message.content == "!봇설명") {
+     return message.reply("나는 민구 따까리다")
+  }
+
+client.on("message", (message) => {
+  if (message.author.bot) return
+  
+  if (message.content == "!갈빙") {
+    return message.reply("갈빙 이란 아이스 갈라진 빙산의 줄임말로 유튜브 형독(박민수)가 카트라이더 리그에서 갈빙에 삼각형 구멍에 빠져 리타이어 한것으로 유명한 맵이다. 따라서 갈빙 바보")
+  } 
+
+client.on("message", (message) => {
+  if (message.author.bot) return
+  
+  if (message.content == "!인사") {
+    return message.reply("머가리 박습니다 행님")
+  }
+
+client.on("message", (message) => {
+  if (message.author.bot) return
+
+  if (message.content == "!카트라이더클럽") {
+    return message.reply("https://discord.gg/NQM2gFU")
+  }
+
   if (message.content == "!si") {
     let embed = new Discord.MessageEmbed()
     let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
@@ -111,6 +139,10 @@ client.on("message", (message) => {
       { name: "!청소", desc: "텍스트 지움" },
       { name: "!초대코드", desc: "해당 채널의 초대 코드 표기" },
       { name: "!초대코드2", desc: "봇이 들어가있는 모든 채널의 초대 코드 표기" },
+      { name: "!봇설명", desc: "봇 설명" },
+      { name: "!갈빙", desc: "갈빙 에 대한 자세한 설명" },
+      { name: "!인사", desc: "인사" },
+      { name: "!카트라이더클럽", desc: "카트라이더 클럽(Experts)디스코드서버" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of 민구 BOT", helpImg).setColor("#186de6").setFooter(`민구 BOT`).setTimestamp()
