@@ -6,7 +6,7 @@ require("moment-duration-format");
 const welcomeChannelName = "안녕하세요";
 const byeChannelName = "안녕히가세요";
 const welcomeChannelComment = "디스코드 서버에 오신것을 환영합니다.";
-const byeChannelComment = "OUT";
+const byeChannelComment = "out";
 
 client.on('ready', () => {
   console.log('Power on');
