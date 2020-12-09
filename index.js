@@ -27,7 +27,7 @@ const roleName = "일반" // 입장 시 지급 할 역할의 이름을 적어주
 
 client.on("ready", () => {
   console.log("켰다.")
-  client.user.setPresence({ activity: { name: "!help를 쳐보세요." }, status: "online" })
+  client.user.setPresence({ activity: { name: "!명령어" }, status: "online" })
 })
 
 client.on("guildMemberAdd", (member) => {
@@ -132,7 +132,7 @@ client.on("message", (message) => {
       .setFooter("민구가 만듬", img)
 
     message.channel.send(embed)
-  } else if (message.content == "!help") {
+  } else if (message.content == "!명렁어") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
       { name: "!명령어", desc: "help" },
