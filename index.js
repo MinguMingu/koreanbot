@@ -113,7 +113,7 @@ client.on("message", (message) => {
       { name: "!초대코드2", desc: "봇이 들어가있는 모든 채널의 초대 코드 표기" },
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("Help of 민구 BOT", helpImg).setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("Help of 민구 BOT", helpImg).setColor("#186de6").setFooter(`민구 BOT`).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
