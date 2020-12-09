@@ -47,6 +47,8 @@ client.on("guildMemberRemove", (member) => {
   byeChannel.send(`<@${deleteUser.id}> ${byeChannelComment}\n`) // 올바른 채널명을 기입하지 않았다면, Cannot read property 'send' of undefined; 오류가 발생합니다.
 })
 
+
+
 client.on("message", (message) => {
   if (message.author.bot) return
 
@@ -54,28 +56,24 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
-client.on("message", (message) => {
   if (message.author.bot) return
-  
-  if (message.content == "!봇설명") {
-     return message.reply("나는 민구 따까리다")
-  }
 
-client.on("message", (message) => {
+  if (message.content == "!봇설명") {
+    return message.reply("나는 민구 따까리다")
+  }
+  
   if (message.author.bot) return
   
   if (message.content == "!갈빙") {
     return message.reply("갈빙 이란 아이스 갈라진 빙산의 줄임말로 유튜브 형독(박민수)가 카트라이더 리그에서 갈빙에 삼각형 구멍에 빠져 리타이어 한것으로 유명한 맵이다. 따라서 갈빙 바보")
   } 
 
-client.on("message", (message) => {
   if (message.author.bot) return
   
   if (message.content == "!인사") {
     return message.reply("머가리 박습니다 행님")
   }
 
-client.on("message", (message) => {
   if (message.author.bot) return
 
   if (message.content == "!카트라이더클럽") {
@@ -117,7 +115,7 @@ client.on("message", (message) => {
     let embed = new Discord.MessageEmbed()
       .setTitle("타이틀")
       .setURL("http://www.naver.com")
-      .setAuthor("나긋해", img, "http://www.naver.com")
+      .setAuthor("민구", img, "http://www.naver.com")
       .setThumbnail(img)
       .addField("Inline field title", "Some value here")
       .addField("Inline field title", "Some value here", true)
@@ -279,3 +277,4 @@ function changeCommandStringLength(str, limitLen = 8) {
 }
 
 client.login(token)
+
