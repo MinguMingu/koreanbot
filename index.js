@@ -80,6 +80,12 @@ client.on("message", (message) => {
     return message.reply("https://discord.gg/NQM2gFU")
   }
 
+  if (message.author.bot) return
+
+  if (message.content == "!규칙") {
+    return message.reply("욕설 자제, 반말은 허용된사람끼리, 심야시간 디스코드채팅 자제(음성채팅 가능) 다른 궁금한점은 방장에게 물어보세요")
+  }
+
   if (message.content == "!si") {
     let embed = new Discord.MessageEmbed()
     let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
@@ -141,6 +147,7 @@ client.on("message", (message) => {
       { name: "!갈빙", desc: "갈빙 에 대한 자세한 설명" },
       { name: "!인사", desc: "인사" },
       { name: "!카트라이더클럽", desc: "카트라이더 클럽(Experts)디스코드서버" },
+      { name: "!규칙", desc: "현 디스코드 방 규칙" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of 민구 BOT", helpImg).setColor("#186de6").setFooter(`민구 BOT`).setTimestamp()
