@@ -23,7 +23,7 @@ const byeChannelComment = "out." // 퇴장 시 전송할 메시지의 내용을 
 const roleName = "일반" // 입장 시 지급 할 역할의 이름을 적어주세요.
 
 client.on("ready", () => {
-  console.log("켰다.")
+  console.log("PowerOn.")
 })
 
 client.on("guildMemberAdd", (member) => {
