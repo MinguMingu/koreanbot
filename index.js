@@ -59,8 +59,8 @@ client.on("message", (message) => {
     let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]")
     embed.setColor("#186de6")
-    embed.setAuthor("server info of 콜라곰 BOT", img)
-    embed.setFooter(`콜라곰 BOT ❤️`)
+    embed.setAuthor("server info of 민구 BOT", img)
+    embed.setFooter(`민구 BOT`)
     embed.addField("RAM usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true)
     embed.addField("running time", `${duration}`, true)
     embed.addField("user", `${client.users.cache.size}`, true)
@@ -97,7 +97,7 @@ client.on("message", (message) => {
       .addField("Inline field title", "Some value here", true)
       .addField("Inline field title", "Some value here1\nSome value here2\nSome value here3\n")
       .setTimestamp()
-      .setFooter("나긋해가 만듬", img)
+      .setFooter("민구가 만듬", img)
 
     message.channel.send(embed)
   } else if (message.content == "!help") {
@@ -113,7 +113,7 @@ client.on("message", (message) => {
       { name: "!초대코드2", desc: "봇이 들어가있는 모든 채널의 초대 코드 표기" },
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("Help of 콜라곰 BOT", helpImg).setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("Help of 민구 BOT", helpImg).setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
@@ -156,7 +156,7 @@ client.on("message", (message) => {
     if (message.member != null) {
       // 채널에서 공지 쓸 때
       let contents = message.content.slice("!전체공지2".length)
-      let embed = new Discord.MessageEmbed().setAuthor("공지 of 콜라곰 BOT").setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
+      let embed = new Discord.MessageEmbed().setAuthor("공지 of 민구 BOT").setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
 
       embed.addField("공지: ", contents)
 
